@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+$color-text: #888888;
+$color-main: #FA6980;
+$color-title: #202124;
+$color-bg: #202124;
+$color-bg2: #F6F6F6;
+
+/*BASE
+---------------------------------*/
+body {
+    color: $color-text;
+    line-height: (24/14);
+    letter-spacing: 0;
+    font-family: "Helvetica", "Helvetica Neue", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin inner ($w: 800px) {
+    width: 88%;
+    max-width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $j;
+    align-items: $a;
+}
+
+@mixin py($y: 60px) {
+    padding-top: $y;
+    padding-bottom: $y;
+}
+
+/* BLOCK
+---------------------------------*/
+.header {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        color: #fff;
+        font-size: 12px;
+    }
+}
+
+/*unit*/
+.unit {
+    &__catch {
+        font-size: 12px;
+        font-style: italic;
+        color: $color-main;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 15px;
+
+        &--border {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+    }
+}
+
+.time {
+    margin-top: 20px;
+    padding-left: 26px;
+    align-items: center;
+    background: url(../images/icon_time.png) no-repeat;
+}
+
+.news {
+    &__item {
+        width: 380px;
+        margin-bottom: 60px;
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-left: 10px solid $color-main;
+        line-height: (31/24);
+        padding-left: 10px;
+    }
+
+    &__list {
+        @include flex();
+    }
+}
+
+.trending {
+    @include py();
+    background-color: $color-bg2;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-left: 10px solid $color-main;
+        line-height: (31/24);
+        padding-left: 10px;
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: 380px;
+    }
+
+}
+
+.card {
+    &__body {
+        background-color: #fff;
+        padding: 35px;
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    width: 160px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 43px;
+    background-color: $color-main;
+    margin-top: 25px;
+    margin-left: auto;
+
+    &--info {
+        background-color: $color-bg;
+    }
+}
+
+/*ABOUT
+---------------------------------*/
+.post {
+    margin-bottom: 60px;
+
+    &__inner {
+        @include inner();
+    }
+}
+
+.discovery {
+    @include py();
+    background-color: $color-bg2;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        color: $color-title;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        border-left: 10px solid $color-main;
+        line-height: (31/24);
+        padding-left: 10px;
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: 240px;
+    }
+}
